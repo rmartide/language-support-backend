@@ -21,7 +21,7 @@ app.post('/save', (req, res) => {
 
     console.log(`Word ${word}, image ${image}`);
 
-    res.json({ body: req.body })
+    res.json(req.body)
 });
 
 
