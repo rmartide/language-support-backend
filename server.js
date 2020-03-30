@@ -24,5 +24,22 @@ app.post('/save', (req, res) => {
     res.json(req.body)
 });
 
+app.get('/search', (req, res) => {
+   
+    const {q} = req.query;
+
+    console.log(`/search query: ${q}`);
+
+    const response = [
+        {"word":"word1","translation":"translation1","story":"story1","image":"image1","tags":[],"info":"info","pronunciation":"pronunciation"},
+        {"word":"word2","translation":"translation2","story":"story2","image":"image2","tags":[],"info":"info","pronunciation":"pronunciation"},
+        {"word":"word3","translation":"translation3","story":"story3","image":"image3","tags":[],"info":"info","pronunciation":"pronunciation"},
+    ];
+
+
+    res.json(response)
+});
+
+
 
 app.listen(PORT, () => console.log(`We listening to port ${PORT} boiii!`))
